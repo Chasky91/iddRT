@@ -8,4 +8,5 @@
     /* Center and scale the image nicely */
     background-position: right;
     background-repeat: no-repeat;
+    background-size: contain;
 }
