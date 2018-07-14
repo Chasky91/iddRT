@@ -10,3 +10,6 @@
     background-repeat: no-repeat;
     background-size: contain;
 }
+/*.animated {
+    animation-iteration-count: infinite;
+}*/

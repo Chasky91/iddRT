@@ -16,6 +16,8 @@
     <link href="css/style.css" rel="stylesheet">
     <link href="css/misEstilos.css" rel="stylesheet">
     <link href="css/swiper/swiper.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/animatecss/animate.min.css">
+
     
 </head>
 
@@ -127,20 +129,7 @@
 
         <div class="container-fluid">
 
-        
-
-        <!-- Grid row -->
-        <div class="row">
-
-            <div class="view overlay">
-                <img src="https://mdbootstrap.com/img/Photos/Horizontal/People/6-col/img%20(7).jpg" class="img-fluid " alt="">
-                <div class="mask flex-center rgba-red-strong">
-                    <p class="white-text">Strong overlay</p>
-                </div>
-            </div>
-  
-        </div>
-        <!-- Grid row -->
+    
 
         <div class="row  amber bg">
             
@@ -169,7 +158,7 @@
             <!--<div class="w-100 p-3">-->
                 <div class="w-responsive text-center mx-auto p-3">
                     <div class="d-flex justify-content-start">
-                        <h1 class="display-3 my-5 ">Display 4</h1>        
+                        <h1 class="display-4 my-5 ">Display 4</h1>        
                     </div>
                 </div>
             <!--</div>-->
@@ -177,6 +166,23 @@
                 
                 <!-- Card deck -->
                 <div class="card-deck w-75 p-3">
+
+                    <!-- Card -->
+                    <div class="card mb-3">
+                
+                        <!--Card image-->
+                        <div class="view">
+                            <img class="card-img-top" src="img/pics/abstract-h-c-480-781-10.jpg" alt="Card image cap">
+                            <a href="#!">
+                            <div class="mask flex-center rgba-white-strong">
+                                <p class="">Strong overlay</p>
+                            </div>
+                            </a>
+                        </div>
+                    
+                        
+                
+                    </div>
 
                     <!-- Card -->
                     <div class="card mb-3">
@@ -436,7 +442,33 @@
                     prevEl: '.swiper-button-prev',
                 },
             });
+
+            //$('.mask').addClass('animated slideOutUp');
+            $(".mask").mouseover(function( ) {
+                $('.mask').removeClass('animated slideInDown');
+                $('.mask').addClass('animated fadeOutUp');
+            });
+            $(".card-img-top").mouseleave(function( ) {
+                $('.mask').removeClass('animated fadeOutUp');
+                $('.mask').addClass('animated slideInDown');
+            });
+
+            /*$('.mask').mouseover(function(){
+                $(this).addClass('animated fadeOutUp').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+                    $(this).removeClass('animated fadeOutUp')
+                });
+            })
+
+            $(".card-img-top").mouseout(function( ) {
+                $('.mask').addClass('animated slideInDown').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+                    $('.mask').removeClass('animated slideInDown')
+                });
+            });*/
+            /*$('.mask').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', doSomething);*/
+
         });
+    </script>
+    <script>
     </script>
 </body>
 
