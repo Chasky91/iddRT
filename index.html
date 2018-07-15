@@ -193,8 +193,10 @@
                                     <h2>Titulo Card</h2>
                                 </div>
                             </div>
-                            <div class="w-100 p-3 align-self-center deep-orange darken-3">
-                                <h4 class="card-title invisible">Card titulo</h4>
+                            <div class="deep-orange darken-3">
+                                <div>
+                                    <h4 class="card-title py-2 h4-responsive text-center text-uppercase invisible">Card titulo</h4>
+                                </div>
                             </div> 
                         </div>
                                               
@@ -467,7 +469,7 @@
                 $('.card-title').addClass('animated fadeInUp');
 
             });
-            $(".img-fluid").mouseleave(function( ) {
+            $(".card-img-top").mouseleave(function( ) {
                 $('.mask').removeClass('animated fadeOutUp');
                 $('.mask').addClass('animated slideInDown');
                 $('.card-title').removeClass('animated fadeInUp');
