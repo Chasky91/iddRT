@@ -164,8 +164,46 @@
             <!--</div>-->
             <div class="row d-flex justify-content-center">
                 
+                   
+                    <div class="card-deck w-75 p-3 col-md-3">
+                        <div class="">
+                            <!--Card image-->
+                            <div class="view">
+                                <img class="img-fluid" src="img/pics/abstract-h-c-480-781-10.jpg" alt="Card image cap">
+                                <div class="mask rgba-white-strong animated fadeInUP">
+                                    <h2>Titulo</h2>
+                                </div>
+                                <div class="maske w-100 p-3 align-self-end deep-orange darken-3">
+                                    <h4 class="card-title">Card title</h4>
+                                </div> 
+                            </div>
+                            
+                              
+                        </div>
+                                      
+                    </div>
                 <!-- Card deck -->
                 <div class="card-deck w-75 p-3">
+
+                        
+
+                    <div class="col-md-3">
+                        <div>
+                            <div class="view">
+                                <!--<figure class="figure">
+                                    <img src="img/pics/abstract-h-c-480-781-10.jpg" class="figure-img img-fluid" alt="...">
+                                </figure>-->
+                                <img class="img-fluid" src="img/pics/abstract-h-c-480-781-10.jpg" alt="Card image cap">
+                                <div class="mask flex-center rgba-white-strong">
+                                    <h2>Titulo</h2>
+                                </div>
+                            </div>
+                            <div class=" mask w-100 p-3 align-self-center deep-orange darken-3 animated fadeInUp">
+                                <h4 class="card-title">Card title</h4>
+                            </div> 
+                        </div>
+                                              
+                    </div>
 
                     <!-- Card -->
                     <div class="card mb-3">
@@ -173,41 +211,24 @@
                         <!--Card image-->
                         <div class="view">
                             <img class="card-img-top" src="img/pics/abstract-h-c-480-781-10.jpg" alt="Card image cap">
-                            <a href="#!">
+                            <a href="#!">             </a>
                             <div class="mask flex-center rgba-white-strong">
-                                <p class="">Strong overlay</p>
+                                <div class="" >
+                                    <h2 class="">Card title</h2>
+                                </div>
+                            </div>                            
+               
+                        </div>
+                        <div class="w-100 p-3 align-self-center" style="background-color: #eee;">
+                            <div class="footer-card ">
+                                <h4 class="card-title">Card title</h4>
                             </div>
-                            </a>
                         </div>
                     
                         
                 
                     </div>
 
-                    <!-- Card -->
-                    <div class="card mb-3">
-                
-                        <!--Card image-->
-                        <div class="view overlay">
-                            <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/images/16.jpg" alt="Card image cap">
-                            <a href="#!">
-                            <div class="mask rgba-white-slight"></div>
-                            </a>
-                        </div>
-                    
-                        <!--Card content-->
-                        <div class="card-body">
-                    
-                            <!--Title-->
-                            <h4 class="card-title">Card title</h4>
-                            <!--Text-->
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
-                            <button type="button" class="btn btn-light-blue btn-md">Read more</button>
-                    
-                        </div>
-                
-                    </div>
                     <!-- Card -->
                 
                     <!-- Card -->
@@ -442,11 +463,13 @@
                     prevEl: '.swiper-button-prev',
                 },
             });
-
+            $('.footer-card').hide();
             //$('.mask').addClass('animated slideOutUp');
             $(".mask").mouseover(function( ) {
                 $('.mask').removeClass('animated slideInDown');
                 $('.mask').addClass('animated fadeOutUp');
+                $('.footer-card').show();
+                $('.footer-card').addClass('animated fadeInUp')
             });
             $(".card-img-top").mouseleave(function( ) {
                 $('.mask').removeClass('animated fadeOutUp');

@@ -13,3 +13,12 @@
 /*.animated {
     animation-iteration-count: infinite;
 }*/
+.maske {
+    /* maskeleme */
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: none;
+    z-index: 999;
+  }
