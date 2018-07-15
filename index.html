@@ -165,41 +165,38 @@
             <div class="row d-flex justify-content-center">
                 
                    
-                    <div class="card-deck w-75 p-3 col-md-3">
-                        <div class="">
-                            <!--Card image-->
-                            <div class="view">
-                                <img class="img-fluid" src="img/pics/abstract-h-c-480-781-10.jpg" alt="Card image cap">
-                                <div class="mask rgba-white-strong animated fadeInUP">
-                                    <h2>Titulo</h2>
-                                </div>
-                                <div class="maske w-100 p-3 align-self-end deep-orange darken-3">
-                                    <h4 class="card-title">Card title</h4>
-                                </div> 
+                <div class="card-deck w-75 p-3 col-md-3">
+                    <div class="">
+                        <!--Card image-->
+                        <div class="view">
+                            <img class="img-fluid" src="img/pics/abstract-h-c-480-781-10.jpg" alt="Card image cap">
+                            <div class="mask rgba-white-strong animated fadeInUP">
+                                <h2>Titulo</h2>
                             </div>
-                            
-                              
-                        </div>
-                                      
+                            <div class="maske w-100 p-3 align-self-end deep-orange darken-3">
+                                <h4 class="card-title ">Card title</h4>
+                            </div> 
+                        </div>                     
                     </div>
+                                    
+                </div>
                 <!-- Card deck -->
                 <div class="card-deck w-75 p-3">
-
-                        
-
                     <div class="col-md-3">
                         <div>
                             <div class="view">
                                 <!--<figure class="figure">
                                     <img src="img/pics/abstract-h-c-480-781-10.jpg" class="figure-img img-fluid" alt="...">
                                 </figure>-->
-                                <img class="img-fluid" src="img/pics/abstract-h-c-480-781-10.jpg" alt="Card image cap">
+                                <div>
+                                    <img class="img-fluid" src="img/pics/abstract-h-c-480-781-10.jpg" alt="Card image cap">
+                                </div>
                                 <div class="mask flex-center rgba-white-strong">
-                                    <h2>Titulo</h2>
+                                    <h2>Titulo Card</h2>
                                 </div>
                             </div>
-                            <div class=" mask w-100 p-3 align-self-center deep-orange darken-3 animated fadeInUp">
-                                <h4 class="card-title">Card title</h4>
+                            <div class="w-100 p-3 align-self-center deep-orange darken-3">
+                                <h4 class="card-title invisible">Card titulo</h4>
                             </div> 
                         </div>
                                               
@@ -214,7 +211,7 @@
                             <a href="#!">             </a>
                             <div class="mask flex-center rgba-white-strong">
                                 <div class="" >
-                                    <h2 class="">Card title</h2>
+                                    <h2 class="">Card</h2>
                                 </div>
                             </div>                            
                
@@ -463,17 +460,21 @@
                     prevEl: '.swiper-button-prev',
                 },
             });
-            $('.footer-card').hide();
-            //$('.mask').addClass('animated slideOutUp');
             $(".mask").mouseover(function( ) {
                 $('.mask').removeClass('animated slideInDown');
                 $('.mask').addClass('animated fadeOutUp');
-                $('.footer-card').show();
-                $('.footer-card').addClass('animated fadeInUp')
+                //$('.footer-card').addClass('animated fadeInUp')
+                $('.card-title').removeClass('invisible animated fadeOutUp')
+                $('.card-title').removeClass('animated fadeOutUp')
+                $('.card-title').addClass('animated fadeInUp');
+
             });
             $(".card-img-top").mouseleave(function( ) {
                 $('.mask').removeClass('animated fadeOutUp');
                 $('.mask').addClass('animated slideInDown');
+                $('.card-title').removeClass('animated fadeInUp');
+                $('.card-title').addClass('animated fadeOutUp');
+                //$('.card-title').addClass('invisible');
             });
 
             /*$('.mask').mouseover(function(){
