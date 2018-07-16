@@ -134,7 +134,7 @@
         <div class="row  amber bg">
             
            
-            <div class="w-responsive text-center mx-auto py-2">
+            <div class="w-responsive text-center mx-auto py-1">
                 <div class="d-flex justify-content-center">
                     <h1 class="display-4 my-5 ">Display 4</h1>        
                 </div>
@@ -143,7 +143,7 @@
                 <div class="row">
                     <!-- strat card-->
                     <div class="col-6 col-sm-4">
-                        <div>
+                        <div class="padre">
                             <div class="view">
                                 <img class="card-img-top" src="img/pics/1_480-640.jpg" alt="Card image cap">
                                 <div class="mask flex-center rgba-white-strong">
@@ -246,53 +246,12 @@
        
 
         <!-- Section: Features v.1 -->
-        <section class="text-center my-5">
-
+        <div class="row d-flex justify-content-center orange lighten-5">
             <!-- Section heading -->
-            <h2 class="h1-responsive font-weight-bold my-5">Why is it so great?</h2>
-            <!-- Section description -->
-            <p class="lead grey-text w-responsive mx-auto mb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
-        
-            <!-- Grid row -->
-            <div class="row">
-        
-            <!-- Grid column -->
-            <div class="col-md-4">
-        
-                <i class="fa fa-area-chart fa-3x red-text"></i>
-                <h5 class="font-weight-bold my-4">Analytics</h5>
-                <p class="grey-text mb-md-0 mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit maiores aperiam minima assumenda deleniti hic.
-                </p>
-        
+            <div>            
+                <h2 class="h1-responsive font-weight-bold my-3">Why is it so great?</h2>             
             </div>
-            <!-- Grid column -->
-        
-            <!-- Grid column -->
-            <div class="col-md-4">
-        
-                <i class="fa fa-book fa-3x cyan-text"></i>
-                <h5 class="font-weight-bold my-4">Tutorials</h5>
-                <p class="grey-text mb-md-0 mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit maiores aperiam minima assumenda deleniti hic.
-                </p>
-        
-            </div>
-            <!-- Grid column -->
-        
-            <!-- Grid column -->
-            <div class="col-md-4">
-        
-                <i class="fa fa-comments-o fa-3x orange-text"></i>
-                <h5 class="font-weight-bold my-4">Support</h5>
-                <p class="grey-text mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit maiores aperiam minima assumenda deleniti hic.
-                </p>
-        
-            </div>
-            <!-- Grid column -->
-        
-            </div>
-            <!-- Grid row -->
-      
-        </section>
+        </div>
         <!-- Section: Features v.1 -->
         
         
@@ -397,6 +356,8 @@
     <script type="text/javascript" src="js/mdb.min.js"></script>
     <script src="js/swiper/swiper.min.js"></script>
     <!-- Initialize Swiper -->
+    <!--hover intent-->
+    <script src="js/jquery.hoverIntent.min.js"></script>
     <script>
          $(document).ready(function () {
             //initialize swiper when document ready
@@ -418,18 +379,51 @@
                     prevEl: '.swiper-button-prev',
                 },
             });
-            $(".mask").mouseover(function( ) {
-                $('.mask').removeClass('animated slideInDown');
-                $('.mask').addClass('animated fadeOutUp');
-                //$('.footer-card').addClass('animated fadeInUp')
-                $('.card-title').removeClass('invisible animated fadeOutUp')
-                $('.card-title').removeClass('animated fadeOutUp')
-                $('.card-title').addClass('animated fadeInUp');
+            //var timeout;
+            $(".mask").hoverIntent(function( ) {
+               
+                console.log('entrada')
+                    /* Do Some Stuff*/
+                    $(this).removeClass('animated slideInDown');
+                    $(this).addClass('animated fadeOutUpBig');
+                    
+                    //var viewP = $(this).parents()['1'];
+                    //console.info( $(this).parent().parent().children(':last-child').children().children());
+                    var $viewE = $(this).parent().parent().children(':last-child').children().children();
+                    //$(this).parent().parent().children(':last-child').children().children().removeClass('invisible animated fadeOutUp');
+                    //console.info($(viewP).children('deep-orange darken-3'));
+                    //$viewE.addClass('animated fadeInUpBig');
+                    $viewE.removeClass('invisible animated fadeOutUp');
+                    $viewE.removeClass('animated fadeOutUp');
+                    $viewE.addClass('animated fadeInUp');
+                    //$('.footer-card').addClass('animated fadeInUp')
+                    //$('.card-title').removeClass('invisible animated fadeOutUp')
+                    //$('.card-title').removeClass('animated fadeOutUp')
+                    //$('.card-title').addClass('animated fadeInUp');
+                //}, 1000);
+                
 
             });
+            /*$(".card-img-top").mouseleave(function( ) {
+                console.log('salida')
+                //console.info($(this).parent().children(':last-child'));
+                var $maskaraO = $(this).parent().children(':last-child');
+                $maskaraO.removeClass('animated fadeOutUpBig');
+                $maskaraO.addClass('animated fadeInDownBig');
+                //$('.mask').removeClass('animated fadeOutUpBig');
+                //$('.mask').addClass('animated fadeInDownBig');
+                $('.card-title').removeClass('animated fadeInUp');
+                $('.card-title').addClass('animated fadeOutUp');
+                //$('.card-title').addClass('invisible');
+            });*/
             $(".card-img-top").mouseleave(function( ) {
-                $('.mask').removeClass('animated fadeOutUp');
-                $('.mask').addClass('animated slideInDown');
+                console.log('salida')
+                //console.info($(this).parent().children(':last-child'));
+                var $maskaraO = $(this).parent().children(':last-child');
+                $maskaraO.removeClass('animated fadeOutUpBig');
+                $maskaraO.addClass('animated fadeInDownBig');
+                //$('.mask').removeClass('animated fadeOutUpBig');
+                //$('.mask').addClass('animated fadeInDownBig');
                 $('.card-title').removeClass('animated fadeInUp');
                 $('.card-title').addClass('animated fadeOutUp');
                 //$('.card-title').addClass('invisible');
