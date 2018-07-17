@@ -105,27 +105,51 @@
     
         
 
-        <div class="d-block bg-primary grey lighten-5 ">
+        <!--<div class="d-block bg-primary grey lighten-5 ">
                 <!-- .titulo para sponsors <div class="w-responsive text-center mx-auto p-3 ">
                     <h2>Sponsors</h2>
-                </div>-->
+                </div>
         
                 <div class="w-100 p-3">
-                    <div class="w-responsive text-center mx-auto p-3 swiper-container">
-                        <div class="d-flex justify-content-center swiper-wrapper">
+                    <div class="d-flex justify-content-center  swiper-container">
+                        <div class=" swiper-wrapper">
                             <div class="swiper-slide col-6 col-sm-4"><img src="img/pics/client01.png" alt=""/></div>
                             <div class="swiper-slide col-6 col-sm-4"><img src="img/pics/client02.png" alt=""/></div>
                             <div class="swiper-slide col-6 col-sm-4"><img src="img/pics/client03.png" alt=""/></div>
                             <div class="swiper-slide col-6 col-sm-4"><img src="img/pics/client04.png" alt=""/></div>
                             <div class="swiper-slide col-6 col-sm-4"><img src="img/pics/client05.png" alt=""/></div>
                             <div class="swiper-slide col-6 col-sm-4"><img src="img/pics/client06.png" alt=""/></div>
-                        </div><!-- .carousel-container end -->
+                        </div><!-- .carousel-container end 
                         <div class="swiper-button-next"></div>
                         <div class="swiper-button-prev"></div>
-                    </div><!-- .col-md-12 end -->
-                </div><!-- .row end -->
+                    </div><!-- .col-md-12 end 
+                </div><!-- .row end 
 
+        </div>page-content end --> 
+        
+        
+        
+        <div class="d-block bg-primary grey lighten-5 ">
+            <!-- .titulo para sponsors <div class="w-responsive text-center mx-auto p-3 ">
+                <h2>Sponsors</h2>-->
+            <div class="w-100 p-3">
+                <div class="swiper-container d-flex justify-content-center ">
+                    <div class="swiper-wrapper w-responsive text-center mx-auto p-3">
+                        <div class="swiper-slide"><img src="img/pics/client01.png" alt=""/></div>
+                        <div class="swiper-slide"><img src="img/pics/client02.png" alt=""/></div>
+                        <div class="swiper-slide"><img src="img/pics/client03.png" alt=""/></div>
+                        <div class="swiper-slide"><img src="img/pics/client04.png" alt=""/></div>
+                        <div class="swiper-slide"><img src="img/pics/client05.png" alt=""/></div>
+                        <div class="swiper-slide"><img src="img/pics/client06.png" alt=""/></div>
+                    </div>
+                    <!-- If we need pagination -->               
+                    <!-- If we need navigation buttons -->
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+            </div>
         </div><!-- .page-content end -->   
+
 
     <!--<div class="container-fluid">-->
 
@@ -268,10 +292,10 @@
         <div class="container-fluid text-center text-md-left">
     
           <!-- Grid row -->
-          <div class="row">
+          <div class="row d-flex justify-content-end">
     
             <!-- Grid column -->
-            <div class="col-md-5 mt-md-0 mt-3 py-5">
+            <div class="col-md-4 mt-md-0 mt-3 py-5">
                 <div class="col-lg-2 col-md-12 mb-4">
 
                     <!--Image-->
@@ -382,15 +406,38 @@
     <script src="js/swiper/swiper.min.js"></script>
     <!-- Initialize Swiper -->
     <!--hover intent-->
-    <script src="js/jquery.hoverIntent.min.js"></script>
+    <script type="text/javascript" src="js/jquery.hoverIntent.min.js"></script>
+    <script type="text/javascript" src="js/jquery.hoverIntent.min.js"></script>
     <script>
          $(document).ready(function () {
             //initialize swiper when document ready
             var swiper = new Swiper('.swiper-container', {
-                slidesPerView: 5,
+                /*slidesPerView: 4,
+                spaceBetween: 30,*/
+                //direction: 'horizontal',
+                slidesPerView: 4,
                 spaceBetween: 30,
-                slidesPerGroup: 2,
-                loopFillGroupWithBlank: true,
+                breakpoints: {
+                    // when window width is <= 320px
+                    360: {
+                    slidesPerView: 1,
+                    spaceBetween: 10
+                    },
+                    // when window width is <= 480px
+                    520: {
+                    slidesPerView: 2,
+                    spaceBetween: 20
+                    },
+                    // when window width is <= 640px
+                    680: {
+                    slidesPerView: 3,
+                    spaceBetween: 30
+                    }
+                },
+                loop: true,
+                //slidesPerGroup: 2,
+                //loopFillGroupWithBlank: true,
+                
                 autoplay: {
                     delay: 2500,
                     disableOnInteraction: false,
@@ -405,23 +452,7 @@
                 },
             });
 
-            //swiper para noticias
-            var swiperNoticias = new Swiper('.sw-container', {
-                centeredSlides: true,
-                slidesPerView: 1,
-                spaceBetween: 30,
-                //freeMode: true,
-                pagination: {
-                    el: '.swiper-pagination',
-                    clickable: true,
-                },
-
-                /*navigation: {
-                    nextEl: '.sw-button-next',
-                    prevEl: '.sw-button-prev',
-                },*/
-            });
-            //var timeout;
+            
             $(".mask").hoverIntent(function( ) {
                
                 console.log('entrada')
@@ -452,9 +483,7 @@
 
         });
     </script>
-    <script>
-        
-    </script>
+    
 </body>
 
 </html>
