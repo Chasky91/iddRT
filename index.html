@@ -17,6 +17,8 @@
     <link href="css/misEstilos.css" rel="stylesheet">
     <link href="css/swiper/swiper.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/animatecss/animate.min.css">
+    <link rel="stylesheet" href="css/loaders/loaders.min.css">
+
 
     
 </head>
@@ -112,8 +114,43 @@
         <!--/.Carousel Wrapper-->
     
     
-        <div class="navbar fixed-bottom navbar-dark indigo">
-            <a class="navbar-brand" href="#">Fixed bottom</a>
+        <div class="navbar fixed-bottom navbar-dark row justify-content-md-center rgba-black-strong">
+            <div class="col col-lg-2 d-flex justify-content-end">
+                <a href="#"><img src="img/pics/logo-streaming.png" class="img-fluid" alt=""></a>
+            </div>
+            <div class="col col-lg-2">
+                <div class="row">
+                    <h5 class="h5-responsive white-text ">Estas escuchando </h5>
+                </div>
+                <div class="row">
+                    <h5 class="h5-responsive white-text">Radio buenas ondas</h5>
+                </div>
+            </div>
+            <div class="col col-lg-2">
+                <a id="button-play" class="btn-floating btn-lg  white-text"><i class="fa fa-play fa-2x"></i></a>
+            </div>
+            <div class="col col-lg-2">
+                <a id="button-pause" class="btn-floating btn-lg  white-text"><i class="fa fa-pause fa-2x"></i></a>
+            </div>
+            <div class="col col-lg-2">
+                <div class="loader-inner ball-spin-fade-loader"></div>
+            </div>  
+            <div class="col col-lg-2">
+                <!--Medium red-->
+                <div class="preloader-wrapper big active crazy">
+                    <div class="spinner-layer spinner-red-only">
+                        <div class="circle-clipper left">
+                        <div class="circle"></div>
+                        </div>
+                        <div class="gap-patch">
+                        <div class="circle"></div>
+                        </div>
+                        <div class="circle-clipper right">
+                        <div class="circle"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>          
         </div>
 
         <!--<div class="d-block bg-primary grey lighten-5 ">
@@ -252,29 +289,7 @@
             <!--</div>-->
             <div class="row d-flex justify-content-center">
                 
-                <!--card radio iglesia de Dios
-                <div class="col-md-3">
-                    <div>
-                        <div class="view">
-
-                            <img class="card-img-top" src="img/pics/abstract-h-c-480-781-10.jpg" alt="Card image cap">
-                            <div class="mask flex-center rgba-white-strong">
-                                <div class="w-75 p-3w-responsive text-center mx-auto p-3">
-                                    <h2 >Titulo Card</h2>
-                                    <h4 class="red-text">Lements</h4>
-                                    <h6>6 de Julio de 2018</h6>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="deep-orange darken-3">
-                            <div>
-                                <h4 class="card-title py-2  h4-responsive text-center text-uppercase invisible">Card titulo</h4>
-                            </div>
-                        </div> 
-                    </div>
-                                            
-                </div>
-                end-card radio iglesia de Dios-->
+ 
                    
             </div>
         </section> 
@@ -418,7 +433,9 @@
     <!-- Initialize Swiper -->
     <!--hover intent-->
     <script type="text/javascript" src="js/jquery.hoverIntent.min.js"></script>
-    <script type="text/javascript" src="js/jquery.hoverIntent.min.js"></script>
+    <script type="text/javascript" src="js/howler/howler.min.js"></script>
+    <script type="text/javascript" src="js/loaders/loaders.css.js"></script>
+
     <script>
          $(document).ready(function () {
             //initialize swiper when document ready
@@ -494,6 +511,51 @@
 
         });
     </script>
+    <script>
+        $(document).ready(function () {
+         
+           var radio = new Howl({
+                freq: '100.1',
+                title: "Radio Buenas Ondas",
+                src: ['http://akalmultimedia.net:8000/GDNSLDH'],
+                format: ['mp3'],
+                html5:true,
+                howl: null
+            });
+
+           $('#button-play').on('click', function () {
+               
+
+               console.info(radio);
+               // Clear listener after first call.
+               console.info(radio.state());
+               radio.play();
+
+               // Fires when the sound finishes playing.
+               /*sound.on('end', function(){
+                   console.log('Finished!');
+               });*/
+
+           });
+           $('#button-pause').on('click', function () {
+
+               radio.stop();
+
+               // Fires when the sound finishes playing.
+               /*sound.on('end', function(){
+                   console.log('Finished!');
+               });*/
+
+           });
+           // Clear listener after first call.
+            radio.once('load', function(){
+                console.info('ya esta cargado');
+            });
+            sound.on('end', function(){
+                console.log('Finished!');
+            })
+       });
+   </script>
     
 </body>
 
