@@ -18,8 +18,7 @@
     <link href="css/swiper/swiper.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/animatecss/animate.min.css">
     <link rel="stylesheet" href="css/loaders/loaders.min.css">
-
-
+    <link rel="stylesheet" href="css/loaders/loaders.min.css">
 
 </head>
 
@@ -29,7 +28,7 @@
     <!--Main Navigation-->
     <header>
 
-        <nav class="navbar navbar-expand-lg navbar-dark rgba-black-strong">
+        <nav class="navbar navbar-expand-lg navbar-dark unique-color-dark">
             <a class="navbar-brand" href="#"><strong>R</strong></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -41,13 +40,13 @@
                             <a class="nav-link text-uppercase" href="#">Inicio <span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-uppercase" href="#">Programación</a>
+                            <a class="nav-link text-uppercase" href="programas.html">Programación</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-uppercase" href="#">Nosotros</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-uppercase" href="#">Galería</a>
+                            <a class="nav-link text-uppercase" href="galeria.html">Galería</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-uppercase" href="#">Ubicación</a>
@@ -132,11 +131,11 @@
         <!--/.Carousel Wrapper-->
     
     
-        <div class="navbar fixed-bottom navbar-dark row justify-content-md-center rgba-black-strong">
-            <div class="col col-lg-2 d-flex justify-content-end">
+        <div class="navbar fixed-bottom navbar-dark row justify-content-md-center rgba-black-strong columna-central">
+            <div class="col-md-auto col-lg-2 d-flex justify-content-end">
                 <a href="#"><img src="img/pics/logo-streaming.png" class="img-fluid" alt=""></a>
             </div>
-            <div class="col-12 col-md-auto hidden-sm" >
+            <div class="col-md-auto" >
                 <div class="row">
                     <h5 class="h5-responsive white-text">Estas escuchando </h5>
                 </div>
@@ -144,11 +143,11 @@
                     <h5 class="h5-responsive white-text">Radio buenas ondas</h5>
                 </div>
             </div>
-            <div class="col col-lg-2">
+            <div class="col-md-auto col-lg-2">
                 <div class="row">
-                    <div class="col-12 col-md-auto"></div>
-                        <a id="button-play" class="btn-floating btn-lg  white-text"><i class="fa fa-play fa-2x"></i></a>
-                        <a id="button-pause" class="btn-floating btn-lg  white-text"><i class="fa fa-pause fa-2x"></i></a>
+                    <div class="col-md-auto"></div>
+                        <a class="button-play-stream btn-floating btn-lg  white-text"><i class="fa fa-play fa-2x"></i></a>
+                        <a  class="button-pause-stream btn-floating btn-lg  white-text"><i class="fa fa-pause fa-2x"></i></a>
                     </div>
                     <div class="row justify-content-md-start">
                         <div class="col-1">
@@ -157,53 +156,46 @@
                         <div class="col-1">
 
                             </div>
-                        <div id="loader-radio" class="loader-inner ball-scale-ripple-multiple" disabled></div>
+                        <div class="loader-radio-stream loader-inner ball-scale-ripple-multiple" disabled></div>
                     </div>
                     
 
                 </div>
-                <!--<a id="button-play" class="btn-floating btn-lg  white-text"><i class="fa fa-play fa-2x"></i></a>
-                <a id="button-pause" class="btn-floating btn-lg  white-text"><i class="fa fa-pause fa-2x"></i></a>
-                <div class="col p-4">
-                    <div id="loader-radio" class="loader-inner ball-spin-fade-loader" disabled></div>
-                </div>-->
             </div>  
-            <!--<div class="col col-lg-2">
-                   <div id="loader-radio" class="loader-inner ball-spin-fade-loader" disabled></div>
-            </div>  -->
           
         </div>
 
-
-
-
-        <!--<div class="d-block bg-primary grey lighten-5 ">
-                <!-- .titulo para sponsors <div class="w-responsive text-center mx-auto p-3 ">
-                    <h2>Sponsors</h2>
-                </div>
-
-                <div class="w-100 p-3">
-                    <div class="d-flex justify-content-center  swiper-container">
-                        <div class=" swiper-wrapper">
-                            <div class="swiper-slide col-6 col-sm-4"><img src="img/pics/client01.png" alt=""/></div>
-                            <div class="swiper-slide col-6 col-sm-4"><img src="img/pics/client02.png" alt=""/></div>
-                            <div class="swiper-slide col-6 col-sm-4"><img src="img/pics/client03.png" alt=""/></div>
-                            <div class="swiper-slide col-6 col-sm-4"><img src="img/pics/client04.png" alt=""/></div>
-                            <div class="swiper-slide col-6 col-sm-4"><img src="img/pics/client05.png" alt=""/></div>
-                            <div class="swiper-slide col-6 col-sm-4"><img src="img/pics/client06.png" alt=""/></div>
-                        </div><!-- .carousel-container end
-                        <div class="swiper-button-next"></div>
-                        <div class="swiper-button-prev"></div>
-                    </div><!-- .col-md-12 end
-                </div><!-- .row end
-
-        </div>page-content end -->
-
-
-
-        <div class="d-block bg-primary grey lighten-5 ">
+        <div class="d-block unique-color-dark">
             <!-- .titulo para sponsors <div class="w-responsive text-center mx-auto p-3 ">
                 <h2>Sponsors</h2>-->
+            <div class="columna-central-max w-100 p-3 unique-color-dark d-flex justify-content-center">
+   
+                <div class="col-md-auto col-lg-2 d-flex justify-content-end">
+                    <a href="#"><img src="img/pics/logo-streaming.png" class="img-fluid" alt=""></a>
+                </div>
+                <div class="col-md-auto col-lg-2">
+                    <div class="row">
+                        <div class="col-md-auto"></div>
+                            <a class="button-play-stream btn-floating btn-lg  white-text"><i class="fa fa-play fa-2x"></i></a>
+                            <a class="button-pause-stream btn-floating btn-lg  white-text"><i class="fa fa-pause fa-2x"></i></a>
+                        </div>
+                        <div class="row justify-content-md-start">
+                            <div class="col-1">
+    
+                            </div>
+                            <div class="col-1">
+    
+                                </div>
+                            <div class="loader-radio-stream loader-inner ball-scale-ripple-multiple" disabled></div>
+                        </div>                       
+                    </div>
+            </div>
+        </div><!-- .page-content end -->
+
+        <div class="d-block bg-primary grey lighten-5 ">
+            <div class="w-100 p-3 text-center p-0">
+                <h1 class="h1-responsive"> Sponsors </h1>
+            </div>
             <div class="w-100 p-3">
                 <div class="swiper-container d-flex justify-content-center ">
                     <div class="swiper-wrapper w-responsive text-center mx-auto p-3">
@@ -402,14 +394,14 @@
                     <a href="#!">Inicio</a>
                   </li>
                   <li class="py-2">
-                    <a href="#!">Programación</a>
+                    <a href="programas.html">Programación</a>
 
                   </li>
                   <li class="py-2">
                     <a href="#!">Nosotros</a>
                   </li>
                   <li class="py-2">
-                    <a href="#!">Galeria</a>
+                    <a href="galeria.html">Galería</a>
                   </li>
                   <li class="py-2">
                     <a href="#!">Ubicación</a>
@@ -561,8 +553,8 @@
         $(document).ready(function () {
             "use strict";
             //loader de puntos oculto
-            $('#loader-radio').hide()
-            $('#button-pause').hide();
+            $('.loader-radio-stream').hide()
+            $('.button-pause-stream').hide();
 
             var radio = new Howl({
                 freq: '100.1',
@@ -573,8 +565,8 @@
                 howl: null
             });
 
-            $('#button-play').on('click', function () {
-                $(this).hide();
+            $('.button-play-stream').on('click', function () {
+                $('.button-play-stream').hide();
                 //$('#loader-radio').en
                 isLoadedRadio(radio);
                 radio.play();
@@ -590,13 +582,13 @@
                });*/
 
            });
-           $('#button-pause').on('click', function () {
+           $('.button-pause-stream').on('click', function () {
 
                console.info(radio.state(), 'estado en play');
 
                radio.stop();
-               $(this).hide();
-                $('#button-play').show();
+               $('.button-pause-stream').hide();
+                $('.button-play-stream').show();
                // Fires when the sound finishes playing.
                /*sound.on('end', function(){
                    console.log('Finished!');
@@ -607,8 +599,8 @@
            // Clear listener after first call.
             radio.once('load', function(){
                 console.info('ya esta cargado');
-                $('#button-pause').show();
-                $('#loader-radio').hide();
+                $('.button-pause-stream').show();
+                $('.loader-radio-stream').hide();
             });
             radio.on('end', function(){
                 console.log('Finished!');
@@ -617,9 +609,9 @@
             function isLoadedRadio(radio)
             {
                 if(radio.state()==='loading'){
-                    $('#loader-radio').show();
+                    $('.loader-radio-stream').show();
                 }else{
-                    $('#button-pause').show();
+                    $('.button-pause-stream').show();
                 }
             }
        });
