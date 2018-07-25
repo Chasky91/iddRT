@@ -50,7 +50,7 @@
 /*  granim  */
 .canvas-interactive-wrapper {
     position: relative;
-    height: 300px;
+    height: 260px;
     text-align: center;
 }
 
@@ -66,21 +66,15 @@
 }
 
 .canvas-interactive-wrapper .cta-wrapper {
-    margin-top: 130px;
+    margin-top: 100px;
 }
 
 .canvas-interactive-wrapper .cta-wrapper a {
     position: relative;
     display: inline-block;
     padding: 3px 7px;
-    border: solid 1px transparent;
-    margin-right: 50px;
     z-index: 1;
     text-decoration: none;
-    color: #222;
+    color: #ffffff;
     transition: border .3s;
-}
-
-.canvas-interactive-wrapper .cta-wrapper a.active {
-    border-color: #222;
 }

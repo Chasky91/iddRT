@@ -84,11 +84,8 @@
               <canvas id="canvas-interactive"></canvas>
               <div class="cta-wrapper">
                   <h1 class="mb-4">
-                      <strong>Contacto</strong>
+                    <a class="text-justify"><strong>Contacto</strong></a>
                   </h1>
-                  <a href="#default-state" id="default-state-cta" class="active h1-responsive"><strong>Contacto</strong></a>
-                  <a href="#violet-state" id="violet-state-cta">Violet state</a>
-                  <a href="#orange-state" id="orange-state-cta">Orange state</a>
               </div>
         </section>
         <!--Section: titulo-->
@@ -343,47 +340,16 @@
           states : {
               "default-state": {
                   gradients: [
-                      ['#B3FFAB', '#12FFF7'],
-                      ['#ADD100', '#7B920A'],
-                      ['#1A2980', '#26D0CE']
+                      ['#6BA8EB', '#5669F0'],
+                      ['#5669F0', '#6BA8EB'],
+                      ['#6BA8EB', '#5669F0']
                   ],
                   transitionSpeed: 10000
               },
-              "violet-state": {
-                  gradients: [
-                      ['#9D50BB', '#6E48AA'],
-                      ['#4776E6', '#8E54E9']
-                  ],
-                  transitionSpeed: 2000
-              },
-              "orange-state": {
-                  gradients: [ ['#FF4E50', '#F9D423'] ],
-                  loop: false
-              }
           }
       });
 
-      // With jQuery
-      $('#default-state-cta').on('click', function(event) {
-          event.preventDefault();
-          granimInstance.changeState('default-state');
-          setClass('#default-state-cta')
-      });
-      $('#violet-state-cta').on('click', function(event) {
-          event.preventDefault();
-          granimInstance.changeState('violet-state');
-          setClass('#violet-state-cta')
-      });
-      $('#orange-state-cta').on('click', function(event) {
-          event.preventDefault();
-          granimInstance.changeState('orange-state');
-          setClass('#orange-state-cta')
-      });
-
-      function setClass(element) {
-          $('.canvas-interactive-wrapper a').removeClass('active');
-          $(element).addClass('active');
-      };
+      
       </script>
 
 
