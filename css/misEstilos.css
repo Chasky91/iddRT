@@ -52,13 +52,13 @@
 @media only screen and (max-width: 768px) {
     .columna-central {
         visibility: hidden;
-    }    
+    }
 }
 @media only screen and (min-width: 768px) {
     .columna-central-max {
         visibility: hidden;
         height: 5px;
-    }    
+    }
 }
 /*  granim  */
 .canvas-interactive-wrapper {
@@ -79,7 +79,7 @@
 }
 
 .canvas-interactive-wrapper .cta-wrapper {
-    margin-top: 100px;
+    margin-top: 7em;
 }
 
 .canvas-interactive-wrapper .cta-wrapper a {
@@ -90,4 +90,13 @@
     text-decoration: none;
     color: #ffffff;
     transition: border .3s;
+}
+.stellar {
+  width: 100%;
+  margin: 0;
+  display: table;
+  background-image: url("../img/pics/microfono_parallax.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
 }
