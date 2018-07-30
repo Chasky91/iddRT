@@ -17,12 +17,13 @@
       <!-- Your custom styles (optional) -->
       <link href="css/style.min.css" rel="stylesheet">
       <link href="css/swiper/swiper.min.css" rel="stylesheet">
+      <link href="css/misEstilos.css" rel="stylesheet">
       <link rel="stylesheet" href="css/animatecss/animate.min.css">
       <link rel="stylesheet" href="css/loaders/loaders.min.css">
       <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.3/dist/leaflet.css"
       integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ=="
       crossorigin=""/>
-     
+
   </head>
 
   <body>
@@ -32,7 +33,7 @@
 
           <!-- Navbar -->
           <nav class="navbar fixed-top navbar-expand-lg navbar-dark unique-color-dark scrolling-navbar">
-              <a class="navbar-brand" href="#"><strong>R</strong></a>
+            <a class="navbar-brand" href="index.html"><img src="img/pics/logo-radio-sm.png" class="img-fluid" alt="logo"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -59,7 +60,7 @@
                         </li>
                     </ul>
                 </div>
-               
+
                 <ul class="navbar-nav nav-flex-icons">
                     <li class="nav-item">
                         <a class="nav-link"><i class="fa fa-facebook"></i></a>
@@ -82,16 +83,16 @@
       <main class="mt-5 pt-2 amber">
         <!--Section: titulo-->
         <section class="card wow fadeIn" style="background-image: url(https://mdbootstrap.com/img/Photos/Others/background3.jpg);">
-
-          <!-- Content -->
-          <div class="card-body text-white text-center py-5 px-5 my-5">
-
-              <h1 class="mb-4">
-                  <strong>Ubicación</strong>
-              </h1>
-
-          </div>
-          <!-- Content -->
+          <!--Section: titulo-->
+            <section class="card wow fadeIn canvas-interactive-wrapper" >
+                <canvas id="canvas-interactive"></canvas>
+                <div class="cta-wrapper">
+                    <h1 class="mb-4">
+                        <a class="text-justify"><strong>Ubicación</strong></a>
+                    </h1>
+                </div>
+            </section>
+          <!--Section: titulo-->
         </section>
         <!--Section: titulo-->
           <div class="container">
@@ -99,11 +100,11 @@
               <hr class="my-5">
               <h2 class="h1 text-center my-5 font-weight-bold">Puedes encontrarnos en:</h2>
               <hr class="my-5">
-             
+
               <!--Section: Images-->
             <section class="text-center pb-5">
 
-              
+
               <!-- Grid row -->
               <div class="row">
 
@@ -146,112 +147,111 @@
       </main>
       <!--Main layout-->
 
-    <!-- Footer -->
-    <footer class="page-footer bg-footer font-small blue-grey darken-4 pt-4 ">
+      <!-- Footer -->
+      <footer class="page-footer bg-footer font-small unique-color-dark pt-4 ">
 
-        <!-- Footer Links -->
-        <div class="container-fluid text-center text-md-left">
+          <!-- Footer Links -->
+          <div class="container-fluid text-center text-md-left">
 
-          <!-- Grid row -->
-          <div class="row d-flex justify-content-end">
+            <!-- Grid row -->
+            <div class="row d-flex justify-content-end">
 
-            <!-- Grid column -->
-            <div class="col-md-4 mt-md-0 mt-3 py-5">
-                <div class="col-lg-2 col-md-12 mb-4">
+              <!-- Grid column -->
+              <div class="col-md-3 mt-md-0 mt-2 py-5">
+                  <div class="col-lg-2 col-md-12 mb-4">
 
-                    <!--Image-->
-                    <div>
-                        <img src="img/pics/logo-footer.png" class="img-fluid" alt="">
-                        <a href="">
-                        <div class="mask rgba-white-light"></div>
-                        </a>
-                    </div>
+                      <!--Image-->
+                      <div>
+                          <img src="img/pics/logo-footer.png" class="img-fluid" alt="">
+                          <a href="">
+                          <div class="mask rgba-white-light"></div>
+                          </a>
+                      </div>
 
-                </div>
-                <!-- Content -->
-              <h5 class="text-uppercase">Dirección</h5>
-              <p>Calles Afganistán y Buenos Aires
-                    Catriel- Rio Negro
-                    Argentina
-                    Iglesia de Dios “Casa de oración”.</p>
-
-            </div>
-            <!-- Grid column -->
-
-            <hr class="clearfix w-100 d-md-none pb-3">
-
-            <!-- Grid column -->
-            <div class="col-md-3 mb-md-0 mb-3 py-5">
-
-                <!-- Links -->
-                <h5 class="text-uppercase">Links</h5>
-
-                <ul class="list-unstyled">
-                  <li class="py-2">
-                    <a href="index.html">Inicio</a>
-                  </li>
-                  <li class="py-2">
-                    <a href="programas.html">Programación</a>
-
-                  </li>
-                  <li class="py-2">
-                    <a href="nosotros.html">Nosotros</a>
-                  </li>
-                  <li class="py-2">
-                    <a href="galeria.html">Galería</a>
-                  </li>
-                  <li class="py-2">
-                    <a href="ubicacion.html">Ubicación</a>
-                  </li>
-                  <li class="py-2">
-                    <a href="contacto.html">Contacto</a>
-                  </li>
-                </ul>
+                  </div>
+                  <!-- Content -->
+                <h5 class="text-uppercase">Dirección</h5>
+                <p>Calles Afganistán y Buenos Aires
+                      Catriel- Rio Negro
+                      Argentina
+                      Iglesia de Dios “Casa de oración”.</p>
 
               </div>
               <!-- Grid column -->
+
+              <hr class="clearfix w-100 d-md-none pb-3">
 
               <!-- Grid column -->
               <div class="col-md-3 mb-md-0 mb-3 py-5">
 
-                <!-- Links -->
-                <h5 class="text-uppercase">Ultimas noticias</h5>
-                <div class="media py-2">
-                    <img class="d-flex mr-3" src="https://mdbootstrap.com/img/Photos/Others/placeholder1.jpg" alt="Generic placeholder image">
-                    <div class="media-body">
-                        <h5 class="mt-0 font-weight-bold">Media heading</h5>
-                    </div>
-                </div>
-                <div class="media py-2">
-                    <img class="d-flex mr-3" src="https://mdbootstrap.com/img/Photos/Others/placeholder1.jpg" alt="Generic placeholder image">
-                    <div class="media-body">
-                        <h5 class="mt-0 font-weight-bold">Media heading</h5>
-                    </div>
-                </div>
-                <div class="media py-2">
-                    <img class="d-flex mr-3" src="https://mdbootstrap.com/img/Photos/Others/placeholder1.jpg" alt="Generic placeholder image">
-                    <div class="media-body">
-                        <h5 class="mt-0 font-weight-bold">Media heading</h5>
-                    </div>
-                </div>
+                  <!-- Links -->
+                  <h5 class="text-uppercase">Links</h5>
 
-              </div>
-              <!-- Grid column -->
+                  <ul class="list-unstyled">
+                    <li class="py-2">
+                      <a href="#!">Inicio</a>
+                    </li>
+                    <li class="py-2">
+                      <a href="programas.html">Programación</a>
+
+                    </li>
+                    <li class="py-2">
+                      <a href="nosotros.html">Nosotros</a>
+                    </li>
+                    <li class="py-2">
+                      <a href="galeria.html">Galería</a>
+                    </li>
+                    <li class="py-2">
+                      <a href="ubicacion.html">Ubicación</a>
+                    </li>
+                    <li class="py-2">
+                      <a href="contacto.html">Contacto</a>
+                    </li>
+                  </ul>
+
+                </div>
+                <!-- Grid column -->
+
+                <!-- Grid column -->
+                <div class="col-md-4 mb-md-0 mb-3 py-5">
+
+                  <!-- Links -->
+                  <h5 class="text-uppercase">Ultimas noticias</h5>
+                  <div class="media py-2">
+                      <img class="d-flex mr-3" src="img/pics/noticia_1_footer.jpg" alt="Generic placeholder image">
+                      <div class="media-body">
+                          <h5 class="mt-0 font-weight-bold">Amamos lo que Dios ama</h5>
+                      </div>
+                  </div>
+                  <div class="media py-2">
+                      <img class="d-flex mr-3" src="img/pics/noticia_2_footer.jpg" alt="Generic placeholder image">
+                      <div class="media-body">
+                          <h5 class="mt-0 font-weight-bold">Nuevo programa</h5>
+                      </div>
+                  </div>
+                  <div class="media py-2">
+                      <img class="d-flex mr-3" src="https://mdbootstrap.com/img/Photos/Others/placeholder1.jpg" alt="Generic placeholder image">
+                      <div class="media-body">
+                          <h5 class="mt-0 font-weight-bold">Media heading</h5>
+                      </div>
+                  </div>
+
+                </div>
+                <!-- Grid column -->
+
+            </div>
+            <!-- Grid row -->
 
           </div>
-          <!-- Grid row -->
+          <!-- Footer Links -->
 
-        </div>
-        <!-- Footer Links -->
+          <!-- Copyright -->
+          <div class="footer-copyright unique-color-dark text-center py-3">© 2018 Iglesia de Dios Casa de Oracion:
+          </div>
+          <!-- Copyright -->
 
-        <!-- Copyright -->
-        <div class="footer-copyright blue-grey darken-4 text-center py-3">© 2018 Copyright:
-          <a href="https://mdbootstrap.com/bootstrap-tutorial/"> MDBootstrap.com</a>
-        </div>
-        <!-- Copyright -->
-
-      </footer>
-      <!-- Footer -->
+        </footer>
+        <!-- Footer -->
 
       <!-- SCRIPTS -->
       <!-- JQuery -->
@@ -265,6 +265,9 @@
       <!-- Initializations -->
       <script src="js/swiper/swiper.min.js"></script>
       <script type="text/javascript" src="js/loaders/loaders.css.js"></script>
+      <script type="text/javascript" src="js/granim/granim.min.js"></script>
+
+
         <!-- Make sure you put this AFTER Leaflet's CSS -->
       <script src="https://unpkg.com/leaflet@1.3.3/dist/leaflet.js"
        integrity="sha512-tAGcCfR4Sc5ZP5ZoVz0quoZDYX5aCtEm/eu1KhSLj2c9eFrylXZknQYmxUssFaVJKvvc0dJQixhGjG2yXWiV9Q=="
@@ -304,7 +307,7 @@
                  loop: true,
                  //slidesPerGroup: 2,
                  //loopFillGroupWithBlank: true,
- 
+
                  autoplay: {
                      delay: 2500,
                      disableOnInteraction: false,
@@ -324,14 +327,14 @@
                 center: {lat: -37.872684, lng: -67.798253},
                 zoom: 19
             });*/
-            
+
          });
       </script>
 
       <script>
         //Creat Layer
         //var baseMap = new L.TileLayer('http://{s}.tiles.mapbox.com/v3/gvenech.m13knc8e/{z}/{x}/{y}.png');
-        
+
 
         // Create the map
         var map = new L.map('map', {
@@ -345,7 +348,7 @@
         var baseMap = new L.TileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         }).addTo(map);
-        
+
         var baseMapIndex = {
             "Map": baseMap
         };
@@ -374,6 +377,27 @@
         }
         setParent(htmlObject, a);
       </script>
+      <script>
+         var granimInstance = new Granim({
+           element: '#canvas-interactive',
+           name: 'interactive-gradient',
+           elToSetClassOn: '.canvas-interactive-wrapper',
+           direction: 'diagonal',
+           opacity: [1, 1],
+           isPausedWhenNotInView: true,
+           stateTransitionSpeed: 500,
+           states : {
+               "default-state": {
+                   gradients: [
+                       ['#6BA8EB', '#5669F0'],
+                       ['#5669F0', '#6BA8EB'],
+                       ['#6BA8EB', '#5669F0']
+                   ],
+                   transitionSpeed: 10000
+               },
+           }
+         });
+       </script>
   </body>
 
 </html>
