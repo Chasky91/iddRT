@@ -537,18 +537,21 @@
 
                     var $viewE = $(this).parent().parent().children(':last-child').children().children();
 
-                    //$viewE.removeClass('invisible animated fadeOutUp');
-                    //$viewE.removeClass('animated fadeOutUp');
-                    //$viewE.addClass('animated fadeInUp');
-
-            });
+                },
+                function() {
+                    console.info($(this));
+                    $(this).removeClass('animated fadeOutUpBig');
+                    $(this).addClass('animated fadeInDownBig')
+                    console.info('salimos atraves de intent');
+                }
+            );
 
             $(".card-img-top").mouseleave(function( ) {
                 console.log('salida')
                 //console.info($(this).parent().children(':last-child'));
-                var $maskaraO = $(this).parent().children(':last-child');
+                /*var $maskaraO = $(this).parent().children(':last-child');
                 $maskaraO.removeClass('animated fadeOutUpBig');
-                $maskaraO.addClass('animated fadeInDownBig');
+                $maskaraO.addClass('animated fadeInDownBig');*/
                 //$('.mask').removeClass('animated fadeOutUpBig');
                 //$('.mask').addClass('animated fadeInDownBig');
                 //$('.card-title').removeClass('animated fadeInUp');
