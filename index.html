@@ -291,11 +291,7 @@
            <!-- Section heading -->
            <h2 class="h1-responsive font-weight-bold text-center my-5 text-white">Programas</h2>
            <!-- Section description -->
-           <p class="text-center w-responsive mx-auto mb-5 text-white"><strong>Tenemos una amplia programación, para distintos gustos, además estamos afiliados a CVCLAVOZ
-. </strong></p>
-
-           <hr class="my-5">
-
+           
            <!-- Grid row -->
            <div class="row">
 
@@ -333,7 +329,6 @@
            </div>
            <!-- Grid row -->
 
-           <hr class="my-5">
 
         </div>
           <!-- Section: Blog v.1 -->
@@ -542,22 +537,9 @@
                     console.info($(this));
                     $(this).removeClass('animated fadeOutUpBig');
                     $(this).addClass('animated fadeInDownBig')
-                    console.info('salimos atraves de intent');
                 }
             );
 
-            $(".card-img-top").mouseleave(function( ) {
-                console.log('salida')
-                //console.info($(this).parent().children(':last-child'));
-                /*var $maskaraO = $(this).parent().children(':last-child');
-                $maskaraO.removeClass('animated fadeOutUpBig');
-                $maskaraO.addClass('animated fadeInDownBig');*/
-                //$('.mask').removeClass('animated fadeOutUpBig');
-                //$('.mask').addClass('animated fadeInDownBig');
-                //$('.card-title').removeClass('animated fadeInUp');
-                //$('.card-title').addClass('animated fadeOutUp');
-                //$('.card-title').addClass('invisible');
-            });
 
         });
     </script>
@@ -568,6 +550,7 @@
             $('.loader-radio-stream').hide()
             $('.button-pause-stream').hide();
 
+            var estadoRadio;
             var radio = new Howl({
                 freq: '100.1',
                 title: "Radio Buenas Ondas",
@@ -579,7 +562,7 @@
 
             $('.button-play-stream').on('click', function () {
                 $('.button-play-stream').hide();
-                //$('#loader-radio').en
+                estadoRadio = 'play';
                 isLoadedRadio(radio);
                 radio.play();
 
@@ -587,19 +570,13 @@
                 // Clear listener after first call.
                 console.info(radio.state(), 'estado en play');
 
-
-               // Fires when the sound finishes playing.
-               /*sound.on('end', function(){
-                   console.log('Finished!');
-               });*/
-
            });
            $('.button-pause-stream').on('click', function () {
 
-               console.info(radio.state(), 'estado en play');
-
-               radio.stop();
-               $('.button-pause-stream').hide();
+                console.info(radio.state(), 'estado en play');
+                estadoRadio = 'pausa';
+                radio.stop();
+                $('.button-pause-stream').hide();
                 $('.button-play-stream').show();
                // Fires when the sound finishes playing.
                /*sound.on('end', function(){
@@ -609,18 +586,18 @@
 
            });
            // Clear listener after first call.
-            radio.once('load', function(){
+            /*radio.once('load', function(){
                 console.info('ya esta cargado');
                 $('.button-pause-stream').show();
                 $('.loader-radio-stream').hide();
-            });
+            });*/
             radio.on('end', function(){
                 console.log('Finished!');
             });
 
-            function isLoadedRadio(radio)
+            function isLoadedRadio(radio, estadoR)
             {
-                if(radio.state()==='loading'){
+                if(radio.state()==='loading' && estadoR ==='play'){
                     $('.loader-radio-stream').show();
                 }else{
                     $('.button-pause-stream').show();
