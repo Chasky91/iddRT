@@ -1,0 +1,8 @@
+User-Agent: *
+Disallow: /css/
+Disallow: /font/
+Disallow: /img/
+Disallow: /js/
+Disallow: /scss/
+Disallow: /img/
+Sitemap: http://www.radiobuenasondas.online/sitemap.xml
