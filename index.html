@@ -312,13 +312,7 @@
              <!-- Grid column -->
              <div class="col-lg-5">
 
-               <!-- Featured image -->
-               <!--<div class="view overlay rounded z-depth-2">
-                 <img class="img-fluid" src="https://mdbootstrap.com/img/Photos/Others/img%20(34).jpg" alt="Sample image">
-                 <a>
-                   <div class="mask rgba-white-slight"></div>
-                 </a>
-               </div>-->
+
 
              </div>
              <!-- Grid column -->
@@ -476,7 +470,24 @@
     <script type="text/javascript" src="js/howler/howler.min.js"></script>
     <script type="text/javascript" src="js/loaders/loaders.css.js"></script>
     <script type="text/javascript" src="js/stellar/jquery.stellar.min.js"></script>
+    <script>
+        window.fbAsyncInit = function() {
+            FB.init({
+            appId            : '164180770963816',
+            autoLogAppEvents : true,
+            xfbml            : true,
+            version          : 'v3.1'
+            });
+        };
 
+        (function(d, s, id){
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) {return;}
+            js = d.createElement(s); js.id = id;
+            js.src = "https://connect.facebook.net/es_LA/sdk.js";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
     <script>
          $(document).ready(function () {
             //initialize swiper when document ready
@@ -617,9 +628,6 @@
         prevEl: '#swiper-prog-prev',
       },
     });
-   </script>
-   <script>
-
    </script>
 
 </body>
